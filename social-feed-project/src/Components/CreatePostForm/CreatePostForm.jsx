@@ -24,8 +24,9 @@ const CreatePostForm = (props) => {
             </div>
             <div className='form-group'>
                 <label>Post</label>
-                <inpout type='message' className='form-control' value={post} onChange={(event)=>setPost(event.target.value)}/>
+                <input type='text' className='form-control' value={post} onChange={(event)=>setPost(event.target.value)}/>
             </div>
+            <button type ='submit' className='btn btn-primary'>Post</button>
          </form>
      );
 }

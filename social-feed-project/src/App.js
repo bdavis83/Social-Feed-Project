@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts'
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import './App.css';
 
 function App() {
-  const [entries, setEntries] = useState([{}]);
+  const [entries, setEntries] = useState([{name:'', post:''}]);
 
   function addNewEntry(entry){
     let tempEntries= [...entries, entry];
@@ -20,7 +21,10 @@ function App() {
       <div className='container-fluid'>
         <div className='row'>
           <div className='border-box'>
-            <CreatePostForm/>
+            <CreatePostForm CreatePostFormProperty = {addNewEntry}/>
+          </div>
+          <div className='border-box'>
+            <DisplayPosts parentEntries = {entries}/>
           </div>
         
       </div>
