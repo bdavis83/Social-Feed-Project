@@ -22,7 +22,7 @@ function App() {
       
       <div className='container-fluid'>
         <div className='row'>
-          <div className='border-box' style={{width: '75%', margin: 'auto', padding: '1em'}}>
+          <div className='border-box' style={{width: '75%', margin: 'auto', padding: '1em', marginBottom: "1em"}}>
             <CreatePostForm CreatePostFormProperty = {addNewEntry}/>
           </div>
           <div className='border-box' style={{height: '450px', width: '75%', margin:'auto', padding:'1em'}}>

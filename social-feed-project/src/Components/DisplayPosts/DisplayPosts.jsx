@@ -14,8 +14,8 @@ const displayPosts = (props) => {
                         <td>{entry.post}</td>
                         </tr>
                         <tr>
-                        <button type='button' className='btn btn-secondary btn-sm' data-toggle="button" aria-pressed="false" autocomplete="off">👍</button>
-                        <button type="button" className="btn btn-secondary btn-sm" disabled>👎</button>
+                        <button type='button' className='btn btn-secondary btn-sm' data-toggle="button" aria-pressed="false" autocomplete="off" style={{position: 'absolute', right: '140px'}}>👍</button>
+                        <button type='button' className='btn btn-secondary btn-sm' data-toggle="button" aria-pressed="false" autocomplete="off" style={{position: 'absolute', right: '100px'}}>👎</button>
                         </tr>
                     </tr>
                     
