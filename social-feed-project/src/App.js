@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import DisplayNav from './Components/NavBar/NavBar';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts'
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import './App.css';
 
 function App() {
-  const [entries, setEntries] = useState([{name:'', post:''}]);
+  const [entries, setEntries] = useState([]);
 
   function addNewEntry(entry){
     let tempEntries= [...entries, entry];
@@ -15,15 +16,16 @@ function App() {
   
   return (
     <div>
-      <nav className="navbar navbar-light bg-light">
-        <h3 style={{margin: '1em'}}>Social<small className='text-muted'>Feed</small></h3>
-      </nav>
+      <div className='nav'>
+        <DisplayNav/>
+      </div>
+      
       <div className='container-fluid'>
         <div className='row'>
-          <div className='border-box'>
+          <div className='border-box' style={{width: '75%', margin: 'auto', padding: '1em'}}>
             <CreatePostForm CreatePostFormProperty = {addNewEntry}/>
           </div>
-          <div className='border-box'>
+          <div className='border-box' style={{height: '450px', width: '75%', margin:'auto', padding:'1em'}}>
             <DisplayPosts parentEntries = {entries}/>
           </div>
         
