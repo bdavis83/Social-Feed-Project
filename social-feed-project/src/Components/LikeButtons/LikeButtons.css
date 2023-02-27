@@ -1,0 +1,15 @@
+button{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.active {
+    background-color: blue;
+}
+
+.inactive{
+    background-color: grey;
+}

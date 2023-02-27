@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import DisplayNav from './Components/NavBar/NavBar';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts'
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
+import LikeButton from './Components/LikeButtons/LikeButtons';
+import DislikeButton from './Components/DisLikeButton/DisLikeButton'
 import './App.css';
+import DisLikeButton from './Components/DisLikeButton/DisLikeButton';
+
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -27,6 +31,7 @@ function App() {
           </div>
           <div className='border-box' style={{height: '450px', width: '75%', margin:'auto', padding:'1em'}}>
             <DisplayPosts parentEntries = {entries}/>
+
           </div>
         
       </div>
